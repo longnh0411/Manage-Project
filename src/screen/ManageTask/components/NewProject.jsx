@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react"
 import Input from "./Input"
-import { actionType } from "../App";
 import Modal from "./Modal";
+import { actionType } from "../index";
 export default function NewProject({handleActionType}) {
     let name = useRef();
     let descrption = useRef();

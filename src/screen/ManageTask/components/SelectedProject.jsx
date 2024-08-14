@@ -1,4 +1,4 @@
-import { actionType } from "../App";
+import { actionType } from "../index";
 const SelectedProject = ({project,saveData}) => {
     return(
         <div className="w-[35rem] mt-16">
