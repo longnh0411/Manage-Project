@@ -55,23 +55,35 @@ const Caro = () => {
   const hasDraw = historyLog.length === 9 && !winner;
 
   return (
-    <>
-      <header>
+    <body className="caro-app">
+      <header className="header">
         <img src="/game-logo.png" alt="" />
         <h1>Caro App</h1>
       </header>
       <main>
         <div className="game-container">
           <ol className="players highlight-player">
-            <Player handleChangeName={handleChangeName} namePlayer={players["X"]} symbol="X" activePlayer={activePlayer === 'X' ? true : false} />
-            <Player handleChangeName={handleChangeName} namePlayer={players["O"]} symbol="O" activePlayer={activePlayer === "O" ? true : false} />
+            <Player 
+              handleChangeName={handleChangeName} 
+              namePlayer={players["X"]} 
+              symbol="X" 
+              activePlayer={activePlayer === 'X' ? true : false}
+            />
+            <Player 
+              handleChangeName={handleChangeName} 
+              namePlayer={players["O"]} 
+              symbol="O" 
+              activePlayer={activePlayer === "O" ? true : false}
+            />
           </ol>
-          {(winner || hasDraw === true) && <GameOver winner={winner} handleResetGame={handleResetGame}/>}
+          {
+            (winner || hasDraw === true) && <GameOver winner={winner} handleResetGame={handleResetGame}/>
+          }
           <GameBoard gameBoardValue={gameBoardValue} handleSelectButton={handleSelectButton} />
         </div>
         <Log logs={historyLog} />
       </main>
-    </>
+    </body>
   )
 }
 
