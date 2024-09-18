@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Chronicle';
+    src: url('./assets/font/Chronicle_Display_Semibold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/font/Gilroy-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'GilroyLight';
+    src: url('./assets/font/Gilroy-Light.otf') format('opentype');
+}
+
+.content-page {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top : 0;
+    left: 0;
+    z-index: 99;
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        color : #fff;
+
+        .title-logo {
+            font-family: 'Gilroy';
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .title-item {
+            font-family: 'GilroyLight';
+            font-weight: bold;
+        }
+    }
+
+    .wrap-content {
+        display: flex;
+        flex-direction: column;
+        gap : 32px;
+        margin: 20vh auto;
+        .line {
+            width: 4rem;
+            height: 0px;
+            border: 1px solid #FBD784;
+        }
+    
+        .first-title {
+            color : #FBD784;
+        }
+    
+        .seccond-title {
+            color : #fff;
+            font-family: 'Chronicle';
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+        }
+    
+        .third-title {
+            color : #fff;
+            font-family: 'Gilroy';
+        }
+    }
+
+    .wrap-new {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 200px;
+        padding: 0rem 10vw;
+
+        .new-image {
+            height: 80vh;
+        }
+
+       
+        .wrap-new-content {
+            height: 80vh;
+
+            .line {
+                width: 4rem;
+                height: 0px;
+                border: 1px solid #FBD784;
+            }
+
+            .new-content {
+                display: flex;
+                flex-direction: column;
+                gap : 28px;
+                padding:0rem 10rem;
+                margin: auto;
+
+                .name-new {
+                    color : #FBD784;
+                    font-family: 'Gilroy';
+                    font-size: 18px;
+                }
+    
+                .title-new {
+                    font-family: 'Chronicle';
+                    font-size: 64px;
+                    color : #fff;
+                }
+    
+                .content-new {
+                    font-family: 'GilroyLight';
+                    font-size: 18px;
+                    color : #fff;
+                    line-height: 32px;
+                }
+            }
+        }
+        
+    }
+}
+
+.cus-top-80 {
+    top : 80%
+}
+
+.cus-top-70 {
+    top : 70%
+}
